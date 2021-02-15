@@ -1,6 +1,20 @@
 <template>
-  <article>
-    <nuxt-content :document="article" />
+  <article class="mx-auto prose prose-sm sm:prose lg:prose-lg xl:prose-xl">
+    <div class="lead">
+      <span class="text-sm opacity-50">{{ formatDate(article.date) }}</span>
+      <h1 class="text-lg">{{ article.title }}</h1>
+    </div>
+    <div class="markdown"><nuxt-content :document="article" /></div>
+
+    <footer>
+      <NuxtLink to="/posts" class="w-5 inline-block">
+        <span
+          class="iconify"
+          data-icon="ri:arrow-left-line"
+          data-inline="false"
+        ></span>
+      </NuxtLink>
+    </footer>
   </article>
 </template>
 
@@ -12,6 +26,12 @@ export default Vue.extend({
     const article = await $content('articles', params.slug).fetch()
 
     return { article }
+  },
+  methods: {
+    formatDate(date: Date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleString('en', options)
+    },
   },
 })
 </script>
