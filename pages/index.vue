@@ -1,6 +1,6 @@
 <template>
   <article class="mx-auto prose prose-sm sm:prose lg:prose-lg xl:prose-xl">
-    <g-image alt="avatar" src="~/assets/img/avatar.png" class="avatar" />
+    <img alt="avatar" src="~/assets/img/avatar.png" class="avatar" />
 
     <h2>👋 Hi, I'm Yetrina</h2>
 

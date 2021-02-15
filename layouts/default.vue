@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <fragment>
     <header class="mx-auto p-5 mb-3 text-lg">
       <nav class="flex justify-between">
         <div class="flex flex-row justify-between">
@@ -8,7 +8,7 @@
         <div>
           <ul class="flex flex-row">
             <li class="pr-5">
-              <NuxtLink to="/posts" class="inline-flex items-center nav-item">
+              <NuxtLink to="/blog" class="inline-flex items-center nav-item">
                 <span
                   class="iconify"
                   data-icon="ri:booklet-line"
@@ -57,7 +57,7 @@
     <main class="container mx-auto p-5">
       <Nuxt />
     </main>
-  </div>
+  </fragment>
 </template>
 
 <script lang="ts">

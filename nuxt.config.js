@@ -24,13 +24,19 @@ export default {
       { name: 'revisit-after', content: '7 days' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        src: 'https://code.iconify.design/1/1.0.6/iconify.min.js',
+        defer: true,
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/fragment.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

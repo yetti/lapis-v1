@@ -7,7 +7,7 @@
     <div class="markdown"><nuxt-content :document="note" /></div>
 
     <footer>
-      <NuxtLink to="/posts" class="w-5 inline-block">
+      <NuxtLink to="/notes" class="w-5 inline-block">
         <span
           class="iconify"
           data-icon="ri:arrow-left-line"
