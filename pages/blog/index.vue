@@ -1,5 +1,8 @@
 <template>
-  <article-list :articles="articles" />
+  <section class="mx-auto max-w-screen-sm">
+    <h1 class="section-heading">Posts</h1>
+    <article-list :articles="articles" />
+  </section>
 </template>
 
 <script lang="ts">

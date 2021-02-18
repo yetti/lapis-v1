@@ -1,6 +1,6 @@
 <template>
   <NuxtLink :to="{ name: 'notes-slug', params: { slug: note.slug } }">
-    <div class="text-sm opacity-50 post-date">{{ note.date }}</div>
+    <div class="text-sm opacity-50 post-date">{{ formatDate(note.date) }}</div>
     <article>{{ note.title }}</article>
   </NuxtLink>
 </template>
@@ -13,6 +13,12 @@ export default Vue.extend({
     note: {
       type: Object,
       default: undefined,
+    },
+  },
+  methods: {
+    formatDate(date: Date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleString('en', options)
     },
   },
 })
