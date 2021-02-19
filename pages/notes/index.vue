@@ -3,7 +3,6 @@
     <h1 class="section-heading">Notes</h1>
     <NoteList :notes="notes" />
   </section>
-  <!-- <NoteList /> -->
 </template>
 
 <script lang="ts">
