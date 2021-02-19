@@ -1,11 +1,8 @@
 <template>
   <section class="mx-auto max-w-screen-sm">
     <h1 class="section-heading">Notes</h1>
-    <ul class="list-none">
-      <NoteList :notes="notes" />
-    </ul>
+    <NoteList :notes="notes" />
   </section>
-  <!-- <NoteList /> -->
 </template>
 
 <script lang="ts">

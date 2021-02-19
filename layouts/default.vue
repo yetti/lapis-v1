@@ -1,58 +1,7 @@
 <template>
   <fragment>
     <header class="mx-auto p-5 mb-3 text-lg">
-      <nav class="flex justify-between">
-        <div class="flex flex-row justify-between">
-          <div class="lowercase"><NuxtLink to="/">yetti.io</NuxtLink></div>
-        </div>
-        <div>
-          <ul class="flex flex-row">
-            <li class="pr-5">
-              <NuxtLink to="/blog" class="inline-flex items-center nav-item">
-                <span
-                  class="iconify"
-                  data-icon="ri:booklet-line"
-                  data-inline="false"
-                ></span>
-                <span class="sr-only">Posts</span>
-              </NuxtLink>
-            </li>
-            <li class="pr-5">
-              <NuxtLink to="/notes" class="inline-flex items-center nav-item">
-                <span
-                  class="iconify"
-                  data-icon="ri:sticky-note-line"
-                  data-inline="false"
-                ></span>
-                <span class="sr-only">Notes</span>
-              </NuxtLink>
-            </li>
-            <li class="pr-5">
-              <NuxtLink
-                to="https://github.com/yetti"
-                class="inline-flex items-center nav-item"
-              >
-                <span
-                  class="iconify"
-                  data-icon="ri:github-fill"
-                  data-inline="false"
-                ></span>
-                <span class="sr-only">GitHub</span>
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/" class="inline-flex items-center nav-item">
-                <span
-                  class="iconify"
-                  data-icon="ri:user-line"
-                  data-inline="false"
-                ></span>
-                <span class="sr-only">About</span>
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <navbar />
     </header>
     <main class="container mx-auto p-5">
       <Nuxt />
@@ -62,9 +11,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import Navbar from '@/components/Navbar.vue'
 
 export default Vue.extend({
   name: 'DefaultLayout',
+  components: {
+    Navbar,
+  },
   data() {
     return {
       showNav: false,
