@@ -1,54 +1,123 @@
 <template>
-  <nav class="flex justify-between">
-    <div class="flex flex-row justify-between">
-      <div class="lowercase"><NuxtLink to="/">yetti.io</NuxtLink></div>
-    </div>
-    <div>
-      <ul class="flex flex-row">
-        <li class="pr-5">
-          <NuxtLink to="/blog" class="inline-flex items-center nav-item">
-            <span
-              class="iconify"
-              data-icon="ri:booklet-line"
-              data-inline="false"
-            ></span>
-            <span class="sr-only">Posts</span>
-          </NuxtLink>
-        </li>
-        <li class="pr-5">
-          <NuxtLink to="/notes" class="inline-flex items-center nav-item">
-            <span
-              class="iconify"
-              data-icon="ri:sticky-note-line"
-              data-inline="false"
-            ></span>
-            <span class="sr-only">Notes</span>
-          </NuxtLink>
-        </li>
-        <li class="pr-5">
+  <nav class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <div class="flex-shrink-0 flex items-center">
+            <span class="block h-8 w-auto font-medium pt-1 border-b-2 border-indigo-300">yetti.io</span>
+          </div>
+        </div>
+        <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+          <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
           <a
-            href="https://github.com/yetti"
-            class="inline-flex items-center nav-item"
+            href="#"
+            class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
           >
-            <span
-              class="iconify"
-              data-icon="ri:github-fill"
-              data-inline="false"
-            ></span>
-            <span class="sr-only">GitHub</span>
+            Posts
           </a>
-        </li>
-        <li>
-          <NuxtLink to="/" class="inline-flex items-center nav-item">
-            <span
-              class="iconify"
-              data-icon="ri:user-line"
-              data-inline="false"
-            ></span>
-            <span class="sr-only">About</span>
-          </NuxtLink>
-        </li>
-      </ul>
+          <a
+            href="#"
+            class="text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium"
+          >
+            Notes
+          </a>
+          <a
+            href="#"
+            class="text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium"
+          >
+            GitHub
+          </a>
+          <a
+            href="#"
+            class="text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium"
+          >
+            Twitter
+          </a>
+        </div>
+        <div class="-mr-2 flex items-center sm:hidden">
+          <!-- Mobile menu button -->
+          <button
+            type="button"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            @click="toggleMobileMenu"
+          >
+            <span class="sr-only">Open main menu</span>
+            <!-- Icon when menu is closed. -->
+            <!--
+            Heroicon name: outline/menu
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+            <svg
+              v-if="!showMobileMenu"
+              class="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <!-- Icon when menu is open. -->
+            <!--
+            Heroicon name: outline/x
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+            <svg
+              v-if="showMobileMenu"
+              class="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div v-if="showMobileMenu" id="mobile-menu" class="sm:hidden">
+      <div class="pt-2 pb-3 space-y-1">
+        <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
+        <a
+          href="#"
+          class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+          >Posts</a
+        >
+        <a
+          href="#"
+          class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+          >Notes</a
+        >
+        <a
+          href="#"
+          class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+          >GitHub</a
+        >
+        <a
+          href="#"
+          class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+          >Twitter</a
+        >
+      </div>
     </div>
   </nav>
 </template>
@@ -56,5 +125,16 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  data() {
+    return {
+      showMobileMenu: false,
+    }
+  },
+  methods: {
+    toggleMobileMenu() {
+      this.showMobileMenu = !this.showMobileMenu
+    },
+  },
+})
 </script>

@@ -23,7 +23,13 @@ export default {
       },
       { name: 'revisit-after', content: '7 days' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://rsms.me/inter/inter.css',
+      },
+    ],
     script: [
       {
         src: 'https://code.iconify.design/1/1.0.6/iconify.min.js',

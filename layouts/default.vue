@@ -1,12 +1,22 @@
 <template>
-  <fragment>
+  <div class="bg-white">
+    <div class="relative overflow-hidden">
+      <header class="relative">
+        <navbar />
+      </header>
+      <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
+        <Nuxt />
+      </main>
+    </div>
+  </div>
+  <!-- <fragment>
     <header class="mx-auto p-5 mb-3 text-lg">
       <navbar />
     </header>
     <main class="container mx-auto p-5">
       <Nuxt />
     </main>
-  </fragment>
+  </fragment> -->
 </template>
 
 <script lang="ts">
@@ -30,52 +40,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-<style>
-.layout {
-  max-width: 50em !important;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-a {
-  opacity: 0.7;
-  transition-duration: 0.2s;
-}
-
-a:hover {
-  opacity: 1;
-}
-
-.nav-title.posts {
-  margin-left: -3.4rem;
-}
-
-.nav-title.code {
-  margin-left: -6.3rem;
-}
-
-.nav-title.about {
-  margin-left: -8.4rem;
-}
-
-.nav-item .nav-title {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  @apply text-base;
-}
-
-.nav-item:hover .nav-title {
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0s, opacity 0.5s linear;
-  text-align: right;
-}
-
-.section-heading {
-  @apply flex text-3xl;
-  margin-bottom: 1.5em;
-}
-</style>
