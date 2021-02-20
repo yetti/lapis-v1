@@ -36,5 +36,39 @@ export default Vue.extend({
 
     return { projects }
   },
+  head() {
+    return {
+      title: 'Projects - yetti.io',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Index of projects on yetti.io',
+        },
+        // Open Graph
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Projects - yetti.io',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'Index of projects on yetti.io',
+        },
+        // Twitter Card
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Projects - yetti.io',
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: 'Index of projects on yetti.io',
+        },
+      ],
+    }
+  },
 })
 </script>
