@@ -1,8 +1,8 @@
 ---
 title: lapis
-categories: 
+categories:
   - vuejs
-icon: carbon:lapis
+icon: carbon:notebook
 url: https://github.com/yetti/lapis
 description: The Nuxt.js app that runs this site.
 ---
