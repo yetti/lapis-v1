@@ -1,6 +1,5 @@
 ---
 title: dcsion
-category: vuejs
 categories:
   - vuejs
 icon: carbon:chemistry

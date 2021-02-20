@@ -2,7 +2,6 @@
 title: Installing OMZ ASDF plugin with zinit
 date: 2020-11-14T04:16:19.681Z
 comments: false
-category: note
 categories:
   - note
 ---

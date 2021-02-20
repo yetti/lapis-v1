@@ -1,6 +1,5 @@
 ---
 title: meeple-buddy
-category: vuejs
 categories:
   - vuejs
 icon: carbon:box

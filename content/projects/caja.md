@@ -1,6 +1,5 @@
 ---
 title: caja
-category: ruby
 categories:
   - ruby
 icon: carbon:box

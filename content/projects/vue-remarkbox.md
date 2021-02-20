@@ -1,6 +1,5 @@
 ---
 title: vue-remarkbox
-category: vuejs
 categories:
   - vuejs
 icon: carbon:forum
