@@ -23,7 +23,13 @@ export default {
       },
       { name: 'revisit-after', content: '7 days' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://rsms.me/inter/inter.css',
+      },
+    ],
     script: [
       {
         src: 'https://code.iconify.design/1/1.0.6/iconify.min.js',
@@ -33,7 +39,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@/assets/css/app.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~/plugins/fragment.js'],
@@ -56,8 +62,19 @@ export default {
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-atom-dark.css',
+      },
+      remarkPlugins: ['remark-emoji'],
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  loading: {
+    color: 'blue',
+    height: '5px',
+  },
 }

@@ -2,10 +2,11 @@
 title: Reboot. Gridsome + Netlify = ❤️
 date: 2020-01-07T17:43:37.669Z
 comments: false
+category: this
 ---
 
 I've migrated my blog from Hugo to Gridsome.
-
+<!--more-->
 I've been spending a lot of time learning Vue.js and the ecosystem of tools around it, so wanted to try and build my personal site with a Vue-based
 framework. Surprisingly, I found it so much easier to build a site in Gridsome than in Hugo. There are still a couple issues and missing
 features around that I have to deal with, but for the most part the layout and configuration of the site is done.

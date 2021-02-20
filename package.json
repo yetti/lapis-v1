@@ -7,7 +7,7 @@
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .eslintignore .",
     "lint": "yarn lint:js",
     "test": "jest",
     "postinstall": "husky install"
@@ -24,14 +24,18 @@
   "dependencies": {
     "@nuxt/content": "^1.13.1",
     "@nuxt/typescript-runtime": "^2.0.1",
+    "@tailwindcss/line-clamp": "^0.2.0",
     "@tailwindcss/typography": "^0.4.0",
     "core-js": "^3.9.0",
     "nuxt": "^2.15.0",
+    "prism-themes": "^1.5.0",
     "vue-fragment": "^1.5.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@iconify-icons/carbon": "^1.1.1",
+    "@iconify/vue": "^1.0.6",
     "@nuxt/types": "^2.15.0",
     "@nuxt/typescript-build": "^2.0.4",
     "@nuxtjs/eslint-config-typescript": "^5.0.0",
@@ -54,6 +58,7 @@
     "lint-staged": "^10.5.3",
     "postcss": "^7",
     "prettier": "^2.2.1",
+    "remark-emoji": "^2.1.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "ts-jest": "^26.4.4",
     "vue-jest": "^3.0.4"

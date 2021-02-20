@@ -1,0 +1,11 @@
+a {
+  @apply text-blue-500 hover:border-gray-300 text-blue-700 border-b-2;
+}
+
+a.nuxt-link-exact-active {
+  @apply text-blue-900;
+}
+
+.index-list-item {
+  @apply mt-2 block border-transparent hover:border-transparent;
+}
