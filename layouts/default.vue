@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Navbar from '@/components/Navbar.vue'
+import Navbar from '@/components/navigation/Navbar.vue'
 
 export default Vue.extend({
   name: 'DefaultLayout',

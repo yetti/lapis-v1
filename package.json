@@ -32,6 +32,8 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@iconify-icons/carbon": "^1.1.1",
+    "@iconify/vue": "^1.0.6",
     "@nuxt/types": "^2.15.0",
     "@nuxt/typescript-build": "^2.0.4",
     "@nuxtjs/eslint-config-typescript": "^5.0.0",

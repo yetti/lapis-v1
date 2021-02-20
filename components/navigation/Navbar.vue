@@ -4,34 +4,31 @@
       <div class="flex justify-between h-16">
         <div class="flex">
           <div class="flex-shrink-0 flex items-center">
-            <span class="block h-8 w-auto font-medium pt-1 border-b-2 border-indigo-300">yetti.io</span>
+            <NuxtLink to="/" class="block lg:hidden h-8 w-auto pt-1">
+              yetti.io
+            </NuxtLink>
           </div>
         </div>
-        <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+        <div class="hidden sm:ml-6 sm:flex sm:space-x-2">
           <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-          <a
-            href="#"
-            class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
-          >
-            Posts
+          <NuxtLink :to="{ name: 'blog' }"> Posts </NuxtLink>
+          <NuxtLink :to="{ name: 'notes' }"> Notes </NuxtLink>
+          <NuxtLink :to="{ name: 'projects' }"> Projects </NuxtLink>
+          <a href="https://github.com/yetti">
+            <span
+              class="iconify h-6 w-6"
+              data-icon="carbon:logo-github"
+              data-inline="false"
+            ></span>
+            <span class="sr-only">GitHub</span>
           </a>
-          <a
-            href="#"
-            class="text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium"
-          >
-            Notes
-          </a>
-          <a
-            href="#"
-            class="text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium"
-          >
-            GitHub
-          </a>
-          <a
-            href="#"
-            class="text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium"
-          >
-            Twitter
+          <a href="https://twitter.com/yettibot">
+            <span
+              class="iconify h-6 w-6"
+              data-icon="carbon:logo-twitter"
+              data-inline="false"
+            ></span>
+            <span class="sr-only">Twitter</span>
           </a>
         </div>
         <div class="-mr-2 flex items-center sm:hidden">
@@ -93,39 +90,18 @@
       </div>
     </div>
 
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div v-if="showMobileMenu" id="mobile-menu" class="sm:hidden">
-      <div class="pt-2 pb-3 space-y-1">
-        <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
-        <a
-          href="#"
-          class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-          >Posts</a
-        >
-        <a
-          href="#"
-          class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-          >Notes</a
-        >
-        <a
-          href="#"
-          class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-          >GitHub</a
-        >
-        <a
-          href="#"
-          class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-          >Twitter</a
-        >
-      </div>
-    </div>
+    <mobile-menu :show-mobile-menu="showMobileMenu" />
   </nav>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import MobileMenu from '@/components/navigation/MobileMenu.vue'
 
 export default Vue.extend({
+  components: {
+    MobileMenu,
+  },
   data() {
     return {
       showMobileMenu: false,
@@ -138,3 +114,13 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style scoped>
+a {
+  @apply border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2;
+}
+
+a.nuxt-link-exact-active {
+  @apply border-indigo-500 text-gray-900 border-b-2;
+}
+</style>
