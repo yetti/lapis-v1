@@ -4,7 +4,7 @@
       <div class="text-lg max-w-prose mx-auto">
         <h1>
           <span
-            class="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase"
+            class="block text-base text-center text-blue-600 font-semibold tracking-wide uppercase"
             >{{ formatDate(post.date) }}</span
           >
           <span
@@ -52,6 +52,45 @@ export default Vue.extend({
     const post = await $content('posts', params.slug).fetch()
 
     return { post }
+  },
+  data() {
+    return {
+      post: {},
+    }
+  },
+  head() {
+    return {
+      title: `${this.$data.post.title} - yetti.io`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$data.description,
+        },
+        // Open Graph
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.$data.post.title,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.$data.post.description,
+        },
+        // Twitter Card
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.$data.post.title,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.$data.post.description,
+        },
+      ],
+    }
   },
   methods: {
     formatDate(date: Date) {

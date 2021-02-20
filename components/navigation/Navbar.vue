@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <div class="flex space-x-2">
-          <NuxtLink to="/"> yetti.io </NuxtLink>
+          <NuxtLink to="/" :exact="true"> yetti.io </NuxtLink>
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:space-x-2">
           <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
@@ -115,6 +115,7 @@ a {
   @apply border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2;
 }
 
+a.nuxt-link-active,
 a.nuxt-link-exact-active {
   @apply border-blue-500 text-gray-900 border-b-2;
 }
