@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: yetti/lapis
+  branch: main
+
+media_folder: 'static/uploads'
+public_folder: '/uploads'
+
+collections:
+  - name: 'blog'
+    label: 'Posts'
+    folder: 'content/posts'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'date' }
+      - { label: 'Comments', name: 'comments', widget: 'boolean' }
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'list',
+          allow_add: true
+          default: ['article'],
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'content/projects'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'list',
+          allow_add: true
+          default: ['vuejs'],
+        }
+      - { label: 'Icon', name: 'icon', widget: 'string' }
+      - { label: 'URL', name: 'url', widget: 'markdown' }
+      - { label: 'Description', name: 'description', widget: 'text' }

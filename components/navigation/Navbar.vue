@@ -2,17 +2,12 @@
   <nav class="bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
-        <div class="flex">
-          <div class="flex-shrink-0 flex items-center">
-            <NuxtLink to="/" class="block lg:hidden h-8 w-auto pt-1">
-              yetti.io
-            </NuxtLink>
-          </div>
+        <div class="flex space-x-2">
+          <NuxtLink to="/"> yetti.io </NuxtLink>
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:space-x-2">
           <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-          <NuxtLink :to="{ name: 'blog' }"> Posts </NuxtLink>
-          <NuxtLink :to="{ name: 'notes' }"> Notes </NuxtLink>
+          <NuxtLink :to="{ name: 'blog' }"> Blog </NuxtLink>
           <NuxtLink :to="{ name: 'projects' }"> Projects </NuxtLink>
           <a href="https://github.com/yetti">
             <span
@@ -121,6 +116,6 @@ a {
 }
 
 a.nuxt-link-exact-active {
-  @apply border-indigo-500 text-gray-900 border-b-2;
+  @apply border-blue-500 text-gray-900 border-b-2;
 }
 </style>

@@ -7,34 +7,34 @@
         <h2
           class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"
         >
-          Blog
+          Projects
         </h2>
         <div class="mt-3 sm:mt-4 lg:items-center">
           <p class="text-xl text-gray-500">
-            Infrequently updated posts on tech and random topics.
+            Personal and open source projects.
           </p>
         </div>
       </div>
-      <post-list :posts="posts" />
+      <project-list :projects="projects" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import PostList from '@/components/PostList.vue'
+import ProjectList from '@/components/ProjectList.vue'
 
 export default Vue.extend({
   components: {
-    PostList,
+    ProjectList,
   },
   async asyncData({ $content, params }) {
-    const posts = await $content('posts', params.slug)
-      .only(['title', 'date', 'comments', 'description', 'category', 'slug'])
-      .sortBy('date', 'desc')
+    const projects = await $content('projects', params.slug)
+      .only(['title', 'category', 'icon', 'url', 'description', 'slug'])
+      .sortBy('title', 'asc')
       .fetch()
 
-    return { posts }
+    return { projects }
   },
 })
 </script>

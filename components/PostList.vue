@@ -1,22 +1,20 @@
 <template>
-  <ul class="list-none">
-    <li v-for="article of articles" :key="article.slug" class="post-link">
-      <Article :article="article" />
-    </li>
-  </ul>
+  <div class="mt-6 pt-10 grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
+    <post-list-item v-for="post of posts" :key="post.slug" :post="post" />
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Article from '@/components/ArticleListItem.vue'
+import PostListItem from '@/components/PostListItem.vue'
 
 export default Vue.extend({
-  name: 'ArticleList',
+  name: 'PostList',
   components: {
-    Article,
+    PostListItem,
   },
   props: {
-    articles: {
+    posts: {
       type: Array,
       default: () => [],
     },

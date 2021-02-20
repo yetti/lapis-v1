@@ -9,14 +9,6 @@
       </main>
     </div>
   </div>
-  <!-- <fragment>
-    <header class="mx-auto p-5 mb-3 text-lg">
-      <navbar />
-    </header>
-    <main class="container mx-auto p-5">
-      <Nuxt />
-    </main>
-  </fragment> -->
 </template>
 
 <script lang="ts">
