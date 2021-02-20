@@ -7,8 +7,8 @@ media_folder: 'static/uploads'
 public_folder: '/uploads'
 
 collections:
-  - name: 'blog'
-    label: 'Posts'
+  - name: 'posts'
+    label: 'Post'
     folder: 'content/posts'
     format: 'frontmatter'
     create: true
@@ -21,14 +21,14 @@ collections:
       - { label: 'Comments', name: 'comments', widget: 'boolean' }
       - {
           label: 'Category',
-          name: 'category',
+          name: 'categories',
           widget: 'list',
-          allow_add: true
+          allow_add: true,
           default: ['article'],
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'projects'
-    label: 'Projects'
+    label: 'Project'
     folder: 'content/projects'
     format: 'frontmatter'
     create: true
@@ -39,11 +39,11 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - {
           label: 'Category',
-          name: 'category',
-          widget: 'list',
-          allow_add: true
+          name: 'categories',
+          widget: 'string',
+          allow_add: true,
           default: ['vuejs'],
         }
       - { label: 'Icon', name: 'icon', widget: 'string' }
-      - { label: 'URL', name: 'url', widget: 'markdown' }
+      - { label: 'URL', name: 'url', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text' }

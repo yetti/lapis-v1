@@ -2,7 +2,6 @@
 title: Moving a WSL Distro to Another Drive
 date: 2020-11-24T08:17:23.097Z
 comments: false
-category: article
 ---
 **Update 17/01/2021:** If you are using the WSL integration functionality in any JetBrains IDEs (i.e. Idea or RubyMine), following these instructions can cause that functionality to stop working. I haven't explored the cause in great depth (I just wanted to get things working again quickly.), but I suspect it's Step 5 that causes the issue. So far, I have not had any issues with VSCode after following these steps though.
 

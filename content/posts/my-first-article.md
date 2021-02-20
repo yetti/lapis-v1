@@ -2,7 +2,6 @@
 title: Reboot. Gridsome + Netlify = ❤️
 date: 2020-01-07T17:43:37.669Z
 comments: false
-category: this
 ---
 
 I've migrated my blog from Hugo to Gridsome.

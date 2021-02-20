@@ -2,7 +2,6 @@
 title: Connecting WSL2 Rails App to Postgresql on Windows
 date: 2021-01-16T21:03:34.266Z
 comments: false
-category: article
 ---
 If connecting a WSL2 Rails app to Postgresql on Windows is resulting in errors, the following may help.
 <!--more-->
