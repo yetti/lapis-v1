@@ -30,7 +30,7 @@ export default Vue.extend({
   },
   async asyncData({ $content, params }) {
     const projects = await $content('projects', params.slug)
-      .only(['title', 'category', 'icon', 'url', 'description', 'slug'])
+      .only(['title', 'categories', 'icon', 'url', 'description', 'slug'])
       .sortBy('title', 'asc')
       .fetch()
 
