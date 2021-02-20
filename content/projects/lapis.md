@@ -1,6 +1,7 @@
 ---
 title: lapis
-categories: vuejs
+categories: 
+  - vuejs
 icon: carbon:lapis
 url: https://github.com/yetti/lapis
 description: The Nuxt.js app that runs this site.
