@@ -2,7 +2,6 @@
 title: Moving a WSL Distro to Another Drive
 date: 2020-11-24T08:17:23.097Z
 comments: false
-category: article
 categories:
   - article
 ---

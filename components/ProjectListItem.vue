@@ -16,10 +16,12 @@
           {{ project.title }}
 
           <span
+            v-for="category of project.categories"
+            :key="category"
             class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium"
-            :class="project.category"
+            :class="category"
           >
-            {{ project.category }}
+            {{ category }}
           </span>
         </dt>
         <dd class="mt-2 text-base text-gray-500">

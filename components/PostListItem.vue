@@ -3,10 +3,12 @@
     <p class="text-sm text-gray-500">
       <time :datetime="post.date">{{ formatDate(post.date) }}</time>
       <span
+        v-for="category of post.categories"
+        :key="category"
         class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium"
-        :class="post.category"
+        :class="category"
       >
-        {{ post.category }}
+        {{ category }}
       </span>
     </p>
     <NuxtLink
