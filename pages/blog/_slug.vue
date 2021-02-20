@@ -17,7 +17,11 @@
         <nuxt-content :document="post" />
 
         <footer class="py-10 flex items-center justify-center">
-          <NuxtLink to="/blog" class="w-10 inline-block back-link">
+          <NuxtLink
+            to="/blog"
+            class="w-10 inline-block back-link"
+            title="Back to blog index"
+          >
             <div
               class="flex items-center justify-center h-12 w-12 rounded-md bg-gray-300 hover:bg-blue-500 text-white"
             >
