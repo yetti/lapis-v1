@@ -60,7 +60,7 @@
     "prettier": "^2.2.1",
     "remark-emoji": "^2.1.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "ts-jest": "^26.4.4",
+    "ts-jest": "^26.5.2",
     "vue-jest": "^3.0.4"
   }
 }
