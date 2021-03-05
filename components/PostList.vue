@@ -8,6 +8,8 @@
 import Vue from 'vue'
 import PostListItem from '@/components/PostListItem.vue'
 
+import { PostResult } from '~/types/types'
+
 export default Vue.extend({
   name: 'PostList',
   components: {
@@ -15,7 +17,7 @@ export default Vue.extend({
   },
   props: {
     posts: {
-      type: Array,
+      type: Array as () => Array<PostResult>,
       default: () => [],
     },
   },
