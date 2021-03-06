@@ -8,3 +8,12 @@ export interface PostResult extends IContentOptions {
   categories: string
   slug: string
 }
+
+export interface ProjectResult extends IContentOptions {
+  title: string
+  categories: string
+  icon: string
+  url: string
+  description: string
+  slug: string
+}

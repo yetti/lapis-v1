@@ -1,6 +1,6 @@
 <template>
   <footer class="mx-auto max-w-7xl px-6">
-    <div class="bg-white pt-4 pb-2 px-4 sm:px-6 lg:pt-8 lg:pb-4 lg:px-8">
+    <div class="bg-white pt-8 pb-8 px-4 sm:px-6 lg:px-8">
       <div
         class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl"
       >

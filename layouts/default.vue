@@ -23,11 +23,6 @@ export default Vue.extend({
     Footer,
     Navbar,
   },
-  data() {
-    return {
-      showNav: false,
-    }
-  },
   head() {
     return {
       link: [
@@ -37,11 +32,6 @@ export default Vue.extend({
         },
       ],
     }
-  },
-  methods: {
-    toggleNav() {
-      this.showNav = !this.showNav
-    },
   },
 })
 </script>
