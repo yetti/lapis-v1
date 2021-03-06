@@ -15,6 +15,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import ProjectListItem from '@/components/ProjectListItem.vue'
+import { ProjectResult } from '@/types/types'
 
 export default Vue.extend({
   components: {
@@ -22,7 +23,7 @@ export default Vue.extend({
   },
   props: {
     projects: {
-      type: Array,
+      type: Array as () => Array<ProjectResult>,
       default: () => [],
     },
   },

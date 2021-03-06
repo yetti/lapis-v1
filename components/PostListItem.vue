@@ -34,18 +34,23 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { PostResult } from '~/types/types'
 
 export default Vue.extend({
   name: 'PostListItem',
   props: {
     post: {
-      type: Object,
+      type: Object as () => PostResult,
       default: undefined,
     },
   },
   methods: {
     formatDate(date: Date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      const options: Intl.DateTimeFormatOptions = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }
       return new Date(date).toLocaleString('en', options)
     },
   },

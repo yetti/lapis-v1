@@ -24,6 +24,8 @@
 import Vue from 'vue'
 import PostList from '@/components/PostList.vue'
 
+import { PostResult } from '~/types/types'
+
 export default Vue.extend({
   components: {
     PostList,
@@ -32,7 +34,7 @@ export default Vue.extend({
     const posts = await $content('posts', params.slug)
       .only(['title', 'date', 'comments', 'description', 'categories', 'slug'])
       .sortBy('date', 'desc')
-      .fetch()
+      .fetch<PostResult>()
 
     return { posts }
   },
@@ -43,7 +45,7 @@ export default Vue.extend({
         {
           hid: 'description',
           name: 'description',
-          content: 'Index of blog posts on yetti.io',
+          content: 'Blog posts on yetti.io',
         },
         // Open Graph
         {
@@ -54,7 +56,7 @@ export default Vue.extend({
         {
           hid: 'og:description',
           property: 'og:description',
-          content: 'Index of blog posts on yetti.io',
+          content: 'Blog posts on yetti.io',
         },
         // Twitter Card
         {
@@ -65,7 +67,7 @@ export default Vue.extend({
         {
           hid: 'twitter:description',
           name: 'twitter:description',
-          content: 'Index of blog posts on yetti.io',
+          content: 'Blog posts on yetti.io',
         },
       ],
     }

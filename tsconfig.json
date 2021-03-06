@@ -27,7 +27,8 @@
       "@nuxt/types",
       "@nuxt/content",
       "@types/node",
-      "./types"
+      "./types/missing-modules",
+      "./types/vue-shim"
     ]
   },
   "exclude": [

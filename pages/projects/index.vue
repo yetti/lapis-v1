@@ -23,6 +23,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import ProjectList from '@/components/ProjectList.vue'
+import { ProjectResult } from '@/types/types'
 
 export default Vue.extend({
   components: {
@@ -32,7 +33,7 @@ export default Vue.extend({
     const projects = await $content('projects', params.slug)
       .only(['title', 'categories', 'icon', 'url', 'description', 'slug'])
       .sortBy('title', 'asc')
-      .fetch()
+      .fetch<ProjectResult>()
 
     return { projects }
   },
