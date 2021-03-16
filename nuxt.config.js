@@ -78,4 +78,7 @@ export default {
     color: 'blue',
     height: '5px',
   },
+  tailwindcss: {
+    jit: true,
+  },
 }
