@@ -5,7 +5,16 @@
       <span
         v-for="category of post.categories"
         :key="category"
-        class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium"
+        class="
+          ml-2
+          inline-flex
+          items-center
+          px-3
+          py-0.5
+          rounded-full
+          text-sm
+          font-medium
+        "
         :class="category"
       >
         {{ category }}
