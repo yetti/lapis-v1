@@ -4,11 +4,26 @@
       <div class="text-lg max-w-prose mx-auto">
         <h1>
           <span
-            class="block text-base text-center text-blue-600 font-semibold tracking-wide uppercase"
+            class="
+              block
+              text-base text-center text-blue-600
+              font-semibold
+              tracking-wide
+              uppercase
+            "
             >{{ formatDate(post.date) }}</span
           >
           <span
-            class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+            class="
+              mt-2
+              block
+              text-3xl text-center
+              leading-8
+              font-extrabold
+              tracking-tight
+              text-gray-900
+              sm:text-4xl
+            "
             >{{ post.title }}</span
           >
         </h1>
@@ -23,7 +38,17 @@
             title="Back to blog index"
           >
             <div
-              class="flex items-center justify-center h-12 w-12 rounded-md bg-gray-300 hover:bg-blue-500 text-white"
+              class="
+                flex
+                items-center
+                justify-center
+                h-12
+                w-12
+                rounded-md
+                bg-gray-300
+                hover:bg-blue-500
+                text-white
+              "
             >
               <!-- Heroicon name: outline/arrow-left -->
               <svg
