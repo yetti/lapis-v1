@@ -2,7 +2,16 @@
   <div>
     <a :href="project.url">
       <div
-        class="flex items-center justify-center h-12 w-12 rounded-md text-white project-icon"
+        class="
+          flex
+          items-center
+          justify-center
+          h-12
+          w-12
+          rounded-md
+          text-white
+          project-icon
+        "
       >
         <!-- Heroicon name: outline/globe-alt -->
         <span
@@ -18,7 +27,16 @@
           <span
             v-for="category of project.categories"
             :key="category"
-            class="ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium"
+            class="
+              ml-2
+              inline-flex
+              items-center
+              px-3
+              py-0.5
+              rounded-full
+              text-sm
+              font-medium
+            "
             :class="category"
           >
             {{ category }}
