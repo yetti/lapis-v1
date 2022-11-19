@@ -17,13 +17,13 @@
             ></span>
             <span class="sr-only">GitHub</span>
           </a>
-          <a href="https://twitter.com/yettibot">
+          <a rel="me" href="https://ruby.social/@yetti">
             <span
               class="iconify h-6 w-6"
-              data-icon="carbon:logo-twitter"
+              data-icon="mdi:mastodon"
               data-inline="false"
             ></span>
-            <span class="sr-only">Twitter</span>
+            <span class="sr-only">Mastodon</span>
           </a>
         </div>
         <div class="-mr-2 flex items-center sm:hidden">
