@@ -28,7 +28,7 @@
     "core-js": "^3.10.0",
     "nuxt": "^2.15.4",
     "prism-themes": "^1.7.0",
-    "vue-fragment": "^1.5.1"
+    "vue-fragment": "^1.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
