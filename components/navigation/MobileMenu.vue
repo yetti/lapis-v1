@@ -6,7 +6,7 @@
       <NuxtLink :to="{ name: 'blog' }">Blog</NuxtLink>
       <NuxtLink :to="{ name: 'projects' }">Projects</NuxtLink>
       <a href="https://github.com/yetti">GitHub</a>
-      <a href="https://twitter.com/yettibot">Twitter</a>
+      <a rel="me" href="https://ruby.social/@yetti">Mastodon</a>
     </div>
   </div>
 </template>
